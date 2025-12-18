@@ -21,7 +21,7 @@ function addPoints(scoreTeam, points) {
     winningTeam();
 }
 
-// add new game button (reset scores)
+// new game button (reset scores)
 function newGame() {
     homeScore = 0;
     guestScore = 0;
@@ -32,7 +32,6 @@ function newGame() {
 }
 
 // highlight team with higher score
-
 function winningTeam() {
     let winningTeam = homeScore > guestScore ? 'home' : homeScore === guestScore ? 'draw' : 'guest';
 
