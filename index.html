@@ -3,9 +3,12 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+        <!-- scoreboard -->
         <div class="container">
+            <!-- home scoreboard -->
             <div class="scoreboard">
                 <h3>HOME</h3>
+
                 <p id="home-score" class="score">0</p>
                 <div class="buttons">
                     <button onclick="addPoints('homeScore', 1)">+1</button>
@@ -13,6 +16,7 @@
                     <button onclick="addPoints('homeScore', 3)">+3</button>
                 </div>
             </div>
+            <!-- guest scoreboard -->
             <div class="scoreboard">
                 <h3>GUEST</h3>
                 <p id="guest-score" class="score">0</p>
@@ -23,6 +27,10 @@
                 </div>
             </div>
         </div>
+        <!-- new game section -->
+         <div  class="new-game">
+            <button onclick="newGame()">New Game</button>
+         </div>
         <script src="index.js"></script>
     </body>
 </html>

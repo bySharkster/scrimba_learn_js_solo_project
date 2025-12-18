@@ -1,3 +1,4 @@
+@import "./styles/system.css";
 @font-face {
     font-family: 'CursedTimerUlil';
     src: url('./fonts/CursedTimerUlil-Aznm.ttf') format('truetype');
@@ -19,27 +20,26 @@ body {
     justify-content: space-around;
     align-items: center;
     border: 2px solid #fffeff;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     max-width: 575px;
     height: 385px;
     margin: 0 auto;
     margin-block: 0;
     background-color: #18254e;
-    padding: 1rem;
-    
+    padding: var(--space-md);
 }
 
 h3 {
     color: #f7f4f3;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    font-size: 40px;
+    font-size: var(--text-3xl);
 }
 .scoreboard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: var(--space-lg);
 }
 .scoreboard .score {
     color: #f8506c;
@@ -47,7 +47,7 @@ h3 {
     font-size: 90px;
     background-color: #080001;
     display: block;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     text-align: center;
     align-content: center;
     width: 155px;
@@ -56,18 +56,57 @@ h3 {
 
 .buttons {
     display: flex;
-    gap: 9px;
+    gap: var(--space-sm);
     justify-content: center;
-    font-size: 18px;
-    
+    font-size: var(--text-lg);
 }
 .buttons > button {
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     background-color: transparent;
     border-color: #9AABD8;
     color: #9AABD8;
-        font-family: 'CursedTimerUlil', monospace;
-        aspect-ratio: 1;
-        width: 45px;
+    font-family: 'CursedTimerUlil', monospace;
+    aspect-ratio: 1;
+    width: 48px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
 
+.buttons > button:hover {
+    background-color: rgba(154, 171, 216, 0.15);
+    box-shadow: var(--shadow-sm);
+}
+
+.new-game {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #fffeff;
+    border-radius: var(--radius-md);
+    max-width: 575px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: var(--space-md);
+    background-color: #18254e;
+    padding: var(--space-md);
+}
+
+.new-game > button {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: none;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    cursor: pointer;
+    font-family: 'CursedTimerUlil', monospace;
+    font-size: var(--text-lg);
+    color: #f7f4f3;
+    background-color: #9AABD8;
+}
+
+.new-game > button:hover {
+    background-color: #b4c2e7;
+    color: #e4e4e4;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(2px);
 }

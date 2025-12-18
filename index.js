@@ -16,5 +16,32 @@ function addPoints(scoreTeam, points) {
  
  homeScoreParagraph.textContent = homeScore;
  guestScoreParagraph.textContent = guestScore;
- 
+
 }
+
+// add new game button (reset scores)
+function newGame(){
+    homeScore = 0;
+    guestScore = 0;
+    homeScoreParagraph.textContent = homeScore;
+    guestScoreParagraph.textContent = guestScore;
+}
+
+// highlight team with higher score
+
+// add a few more counters 
+// period, fouls, timer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
