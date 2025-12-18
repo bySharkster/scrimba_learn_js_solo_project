@@ -15,7 +15,10 @@ body {
 }
 
 .container {
+    position: relative;
     display: flex;
+    flex-direction: row;
+    gap: var(--space-xl);
     justify-content: space-around;
     align-items: center;
     border: 2px solid #fffeff;
@@ -52,6 +55,22 @@ h3 {
     width: 155px;
     height: 120px;
 }
+.container .timer {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'CursedTimerUlil', monospace;
+    font-size: var(--text-3xl);
+    color: #f8506c;
+    background-color: #080001;
+    border-radius: var(--radius-sm);
+    width: 150px;
+    height: 100px;
+}
 
 .buttons {
     display: flex;
@@ -76,7 +95,7 @@ h3 {
     box-shadow: var(--shadow-sm);
 }
 
-.new-game {
+.controls-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -90,7 +109,7 @@ h3 {
     padding: var(--space-md);
 }
 
-.new-game > button {
+.controls-section > button {
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-md);
     border: none;
@@ -103,11 +122,44 @@ h3 {
     background-color: #9aabd8;
 }
 
-.new-game > button:hover {
+.controls-section > button:hover {
     background-color: #b4c2e7;
     color: #e4e4e4;
     box-shadow: var(--shadow-lg);
     transform: translateY(2px);
+}
+
+/* combo buttons */
+.timer-control {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+}
+
+.timer-control button {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 0;
+    border: none;
+    transition: var(--transition-normal);
+    cursor: pointer;
+    font-family: 'CursedTimerUlil', monospace;
+    font-size: var(--text-lg);
+    color: #f7f4f3;
+    background-color: #9aabd8;
+    border-right: 2px solid #fffeff;
+}
+
+.timer-control button:first-child {
+    border-top-left-radius: var(--radius-md);
+    border-bottom-left-radius: var(--radius-md);
+}
+
+.timer-control button:last-child {
+    border-top-right-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md);
+    border-right: none;
 }
 
 .scoreboard .score.winning {

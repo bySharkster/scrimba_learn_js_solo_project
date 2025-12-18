@@ -1,9 +1,11 @@
+// Score
 let homeScore = 0;
 let guestScore = 0;
 
 let homeScoreParagraph = document.getElementById('home-score');
 let guestScoreParagraph = document.getElementById('guest-score');
 
+// add points
 function addPoints(scoreTeam, points) {
     if (scoreTeam === 'homeScore') {
         homeScore += points;
@@ -45,5 +47,3 @@ function winningTeam() {
         guestScoreParagraph.classList.add('winning');
     }
 }
-// add a few more counters
-// period, fouls, timer
