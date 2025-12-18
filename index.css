@@ -1,4 +1,4 @@
-@import "./styles/system.css";
+@import './styles/system.css';
 @font-face {
     font-family: 'CursedTimerUlil';
     src: url('./fonts/CursedTimerUlil-Aznm.ttf') format('truetype');
@@ -12,7 +12,6 @@
 body {
     margin: 0;
     background-color: #deeae2;
-    
 }
 
 .container {
@@ -63,8 +62,8 @@ h3 {
 .buttons > button {
     border-radius: var(--radius-sm);
     background-color: transparent;
-    border-color: #9AABD8;
-    color: #9AABD8;
+    border-color: #9aabd8;
+    color: #9aabd8;
     font-family: 'CursedTimerUlil', monospace;
     aspect-ratio: 1;
     width: 48px;
@@ -101,7 +100,7 @@ h3 {
     font-family: 'CursedTimerUlil', monospace;
     font-size: var(--text-lg);
     color: #f7f4f3;
-    background-color: #9AABD8;
+    background-color: #9aabd8;
 }
 
 .new-game > button:hover {
@@ -109,4 +108,13 @@ h3 {
     color: #e4e4e4;
     box-shadow: var(--shadow-lg);
     transform: translateY(2px);
+}
+
+.scoreboard .score.winning {
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-normal);
+    outline-color: rgb(136, 248, 80);
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 4px;
 }
